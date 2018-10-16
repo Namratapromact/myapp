@@ -1,0 +1,45 @@
+<div class="admin_section">
+<h1>Administrators</h1>
+<mat-divider></mat-divider>
+
+<div class="admin_container">
+  <mat-toolbar class="admin_toolbar">
+
+      <mat-toolbar-row>
+        <span>Add Administrator</span>
+        <button mat-raised-button color="primary" (click)="goBack()">< Back</button>
+      </mat-toolbar-row>
+  </mat-toolbar>
+  
+  <div class="example-container">
+      
+          <mat-slide-toggle color="primary" class="add_toggle">Enabled</mat-slide-toggle>
+     
+      <mat-form-field>
+          <input matInput placeholder="First Name" required>
+      </mat-form-field>
+    
+      <mat-form-field>
+          <input matInput placeholder="Surname" required>
+      </mat-form-field>
+
+      <mat-form-field>
+          <input matInput placeholder="Email" required>
+      </mat-form-field>
+
+      <mat-form-field>
+          <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'" required>
+          <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-select placeholder="Type">
+          <mat-option *ngFor="let list of lists" [value]="list.value">
+            {{list.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  
+</div>
+</div>

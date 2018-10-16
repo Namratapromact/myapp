@@ -1,0 +1,340 @@
+//@import '~@angular/material/theming';
+@import '../node_modules/@angular/material/_theming.scss';
+
+@include mat-core();
+
+$my-theme-primary: mat-palette($mat-blue);
+$my-theme-accent:  mat-palette($mat-pink, A200, A100, A400);
+$my-theme-warn:    mat-palette($mat-red);
+
+$my-theme: mat-light-theme($my-theme-primary, $my-theme-accent, $my-theme-warn);
+
+@include angular-material-theme($my-theme);
+
+$bg-color: #fff;
+$background-color: #34495E;
+$height100: 100%;
+$width100: 100%;
+
+html,body{ height: $height100; }
+
+body{ margin: 0; background-color: #f8f8ff;}
+
+
+.company_font_size.mat-form-field-appearance-legacy .mat-form-field-underline {
+    background-color: $bg-color;
+}
+
+.mat-select-panel{
+    margin-top: 48px;
+}
+
+//sidebar css
+
+   .mobview{
+    visibility: hidden;
+    }
+
+    .example-container {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+
+    //admin-section css
+    
+    .mat-elevation-z8 {
+    box-shadow: none;
+    border: 1px solid Gainsboro;
+    }
+
+    .admin_section{
+        padding: 0px 30px;
+        height: 700px;
+    }
+    .mat-nav-list {
+       padding-top: 0px!important;
+
+    .mat-list-item {
+        color: #fff;
+        font-size: 12px;
+        white-space: nowrap;
+        padding-right: 20px;
+        height: 40px!important;
+        border-left: 6px solid transparent;
+
+        &:hover {
+            border-left: 6px solid orange!important;
+            background-color: #273746;
+            transition: 0.5s;
+        }
+        &.active {
+            border-left: 6px solid green!important;
+            background-color: #273746;
+        }
+    }
+}
+
+    .sidebar {
+        background-color: $background-color;
+    }
+
+    .admin_container {
+        border-radius: 5px;
+        padding-bottom: 40px;
+    }
+    .mat-toolbar.admin_toolbar {
+        background-color: Gainsboro;
+        margin-top: 20px;
+
+        button {
+         margin: 0px auto;
+         margin-right: 0px;
+         padding-left: 0px;
+        }
+
+        span {
+            font-weight: 600;
+            padding-left: 12px;
+        }
+
+}
+    table {
+      width: $width100;
+   
+        th.mat-sort-header-sorted {
+        color: black;
+        }
+        th.mat-header-cell {
+            font-weight: 600;
+        }
+}
+table.mat-table {
+    padding: 0px 30px;
+    padding-bottom: 45px;
+}
+
+  //Add-admin section css
+  .example-container {
+    display: flex;
+    flex-direction: column;
+    background-color: $bg-color;
+    padding: 30px 30px 0px 30px;
+    position: relative;
+    z-index: 1;
+    border: 1px solid Gainsboro;
+
+    .mat-slide-toggle {
+        padding-bottom: 20px;
+    }
+  }
+  .example-container > * {
+    width: 50%;
+  }
+   .add_toggle {
+    width: 96px;
+  }
+  .mat-form-field-appearance-legacy .mat-form-field-underline {
+    background-color: rgba(0, 0, 0, 0.12);
+  }
+  .mat-form-field {
+      font-size: 15px;
+  }
+  .example-container {
+      padding-bottom: 30px;
+  }
+
+  //Responsive
+  @media (max-width: 1024px) {
+    .mat-toolbar-single-row {
+        height: 61px!important;
+        max-width: 100%;
+    }
+    .sidebar {
+        top:61px;
+    }
+    .admin_section {
+        width: 95%;
+        left: 19%;
+        padding: 0px 19px;
+    }
+
+    table.mat-table {
+        padding: 0px 0px;
+        width: $width100!important;
+
+        .mat-cell {
+            font-size: 12px;
+        }
+    }
+  }
+  @media (max-width: 768px) {
+  
+    .admin-area {
+
+    .grid-container {
+        overflow-x: auto;
+
+        .admin-table {
+            width: 93%;
+            margin-bottom: 15px;
+            overflow-y: hidden;
+            border: 1px solid #EDEDED;
+            box-sizing: border-box;
+            z-index: 2;
+            position: absolute;
+
+            .admin-table .data-grid {
+                margin-top: 0px;
+                border: none;
+                width: $width100; 
+         }
+     }
+  }
+}
+        th.mat-header-cell {               
+        white-space: nowrap;
+        padding: 10px 20px!important;
+        }
+
+        table.mat-table .mat-cell { 
+        padding-left: 24px;
+        white-space: nowrap;
+        }
+
+        .admin_section {
+        left: 25%;
+        width: 93%;
+        }
+    
+    .mat-toolbar-multiple-rows {
+        width: $width100!important;
+    }
+  }
+
+  @media (max-width: 760px) {
+    .sidebar {
+        z-index: 4;
+        top:61px!important;
+    }
+    .example-sidenav-container{
+        margin-top: 0px!important;
+    }
+
+    .sidenav-container[_ngcontent-c1] {
+        max-height: 100%;
+        z-index: 11;
+    }
+    .mat-toolbar.mat-primary[_ngcontent-c1] {
+        z-index: 1;
+    }
+
+    .admin_section {
+        left: 2%;
+        width: 93%;
+    }
+    .example-container {
+        width: 91%;
+    }
+    .mobview {
+        visibility: visible;
+    }
+    .mat-sidenav-fixed {
+        position: absolute!important;
+        top:0px!important;
+    }
+  }
+
+  @media (max-width: 667px) {
+      .title {
+          font-size: 20px;
+      }
+  }
+
+  @media (max-width: 568px) {
+
+    .title {
+        padding-top: 8px;
+        font-size: 25px;
+    }
+    .header .mat-toolbar-single-row {
+        flex-direction: column!important;
+        height: $height100!important;
+
+        .mat-icon-button {
+            position: absolute;
+            left: 55px;
+            top:57px;
+        }
+
+        .mat-form-field {
+            margin-left: -140px;
+        }
+        .margin20 {
+            position: absolute;
+            right: 20%;
+            top:55px;
+        }
+    }
+  }
+
+  @media (max-width: 480px) {
+      
+    .example-container {
+        width: 84%;
+    }
+    .title {
+        padding-top: 8px;
+    }
+    .admin_section {
+        padding: 0px 15px;
+    }
+    .header .mat-toolbar-single-row {
+        flex-direction: column!important;
+        height: $height100!important;
+
+        .mat-icon-button {
+            position: absolute;
+            left: 16px;
+            top:55px;
+        }
+
+        .mat-form-field {
+            margin-left: -80px;
+        }
+        .margin20 {
+            position: absolute;
+            right: 20px;
+            top:55px;
+        }
+    }
+    .example-container > * {
+        width: 75%;
+    }
+  }
+  @media (max-width: 360px) { 
+    .header .mat-toolbar-single-row {
+
+        .mat-icon-button {
+            left: 4px;
+           
+        }
+     }
+  }
+  
+  @media (max-width: 320px) { 
+    .title {
+        font-size: 20px;
+    }
+    .header .mat-toolbar-single-row { 
+
+        .mat-form-field {
+            margin-left: -50px;
+        }
+        .margin20{
+            right: 9px;
+        }
+    }
+  }
