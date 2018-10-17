@@ -2499,7 +2499,6 @@ html, body {
 
 body {
   margin: 0;
-  background-color: #f8f8ff;
 }
 
 .company_font_size.mat-form-field-appearance-legacy .mat-form-field-underline {
@@ -2544,11 +2543,14 @@ body {
   padding-right: 20px;
   height: 40px !important;
   border-left: 6px solid transparent;
+  font-weight: 600;
 }
 
 .mat-nav-list .mat-list-item:hover {
   border-left: 6px solid orange !important;
   background-color: #273746;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .mat-nav-list .mat-list-item.active {
@@ -2593,6 +2595,13 @@ table th.mat-header-cell {
   font-weight: 600;
 }
 
+table .material-icons {
+  cursor: pointer;
+  vertical-align: middle;
+  font-size: 18px;
+  margin-left: 30px;
+}
+
 table.mat-table {
   padding: 0px 30px;
   padding-bottom: 45px;
@@ -2629,6 +2638,14 @@ table.mat-table {
   background-color: rgba(0, 0, 0, 0.12);
 }
 
+.mat-form-field {
+  font-size: 15px;
+}
+
+.example-container {
+  padding-bottom: 30px;
+}
+
 @media (max-width: 1024px) {
   .mat-toolbar-single-row {
     height: 61px !important;
@@ -2638,8 +2655,7 @@ table.mat-table {
     top: 61px;
   }
   .admin_section {
-    width: 79%;
-    left: 19%;
+    padding: 0px 19px;
   }
   table.mat-table {
     padding: 0px 0px;
@@ -2647,6 +2663,15 @@ table.mat-table {
   }
   table.mat-table .mat-cell {
     font-size: 12px;
+  }
+  table.mat-table .material-icons {
+    margin-left: 12px;
+  }
+  table.mat-table th.mat-header-cell:last-of-type {
+    padding-right: 12px;
+  }
+  table.mat-table th.mat-header-cell:first-of-type {
+    padding-right: 12px;
   }
 }
 
@@ -2662,7 +2687,6 @@ table.mat-table {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     z-index: 2;
-    position: absolute;
   }
   .admin-area .grid-container .admin-table .admin-table .data-grid {
     margin-top: 0px;
@@ -2677,50 +2701,113 @@ table.mat-table {
     padding-left: 24px;
     white-space: nowrap;
   }
-  .admin_section {
-    left: 25%;
-    width: 74%;
+  table.mat-table .material-icons {
+    margin-left: 20px;
   }
   .mat-toolbar-multiple-rows {
     width: 100% !important;
   }
-  .example-container {
-    width: 89%;
-    z-index: 3;
-    position: relative;
-  }
 }
 
 @media (max-width: 760px) {
-  .sidebar {
-    z-index: 4;
-    top: 61px !important;
-  }
   .example-sidenav-container {
     margin-top: 0px !important;
   }
   .sidenav-container[_ngcontent-c1] {
     max-height: 100%;
-    z-index: 11;
-  }
-  .mat-toolbar.mat-primary[_ngcontent-c1] {
-    z-index: 1;
-  }
-  .admin_section {
-    left: 2%;
-    width: 96%;
-  }
-  .example-container {
-    width: 91%;
   }
   .mobview {
     visibility: visible;
+  }
+  .mat-sidenav-fixed {
+    position: absolute !important;
+    top: 0px !important;
+  }
+}
+
+@media (max-width: 667px) {
+  .title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 568px) {
+  .title {
+    padding-top: 8px;
+    font-size: 25px;
+  }
+  .header .mat-toolbar-single-row {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    height: 100% !important;
+  }
+  .header .mat-toolbar-single-row .mat-icon-button {
+    position: absolute;
+    left: 55px;
+    top: 57px;
+  }
+  .header .mat-toolbar-single-row .mat-form-field {
+    margin-left: -140px;
+  }
+  .header .mat-toolbar-single-row .margin20 {
+    position: absolute;
+    right: 20%;
+    top: 55px;
   }
 }
 
 @media (max-width: 480px) {
   .example-container {
-    width: 85%;
+    width: 84%;
+  }
+  .title {
+    padding-top: 8px;
+  }
+  .admin_section {
+    padding: 0px 15px;
+  }
+  .header .mat-toolbar-single-row {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    height: 100% !important;
+  }
+  .header .mat-toolbar-single-row .mat-icon-button {
+    position: absolute;
+    left: 16px;
+    top: 55px;
+  }
+  .header .mat-toolbar-single-row .mat-form-field {
+    margin-left: -80px;
+  }
+  .header .mat-toolbar-single-row .margin20 {
+    position: absolute;
+    right: 20px;
+    top: 55px;
+  }
+  .example-container > * {
+    width: 75%;
+  }
+}
+
+@media (max-width: 360px) {
+  .header .mat-toolbar-single-row .mat-icon-button {
+    left: 4px;
+  }
+}
+
+@media (max-width: 320px) {
+  .title {
+    font-size: 20px;
+  }
+  .header .mat-toolbar-single-row .mat-form-field {
+    margin-left: -50px;
+  }
+  .header .mat-toolbar-single-row .margin20 {
+    right: 9px;
   }
 }
 /*# sourceMappingURL=style.css.map */

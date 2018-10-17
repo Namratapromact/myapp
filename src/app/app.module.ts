@@ -5,7 +5,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import {MatButtonModule, MatCheckboxModule, MatMenuModule, MatIconModule, MatCardModule, MatToolbarModule,
   MatSelectModule, MatSidenavModule, MatListModule, MatDividerModule, MatTableModule, MatSlideToggleModule, 
-  MatFormFieldModule, MatInputModule} from '@angular/material';
+  MatFormFieldModule, MatInputModule, MatDialogModule} from '@angular/material';
 import { LayoutModule } from '@angular/cdk/layout';
 import { AdminComponent } from './admin/admin.component';
 import { RouterModule } from '@angular/router';
@@ -14,13 +14,15 @@ import { AddAdminComponent } from './admin/add-admin/add-admin.component';
 import { AdminListComponent } from './admin/admin-list/admin-list.component';
 import { AdminModule } from './admin/admin.module';
 import { AdminRoutingModule } from './admin/admin-routing.module';
+import { DeleteadminComponent } from './admin/deleteadmin/deleteadmin.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AdminComponent,
     AddAdminComponent,
-    AdminListComponent
+    AdminListComponent,
+    DeleteadminComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +42,7 @@ import { AdminRoutingModule } from './admin/admin-routing.module';
     MatSlideToggleModule,
     MatTableModule,
     MatFormFieldModule,
+    MatDialogModule,
     RouterModule,
     AppRoutingModule,
     AdminModule,

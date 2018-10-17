@@ -1,24 +1,28 @@
-    <!-- Header Section start  -->
-      <div class="header">
-        <mat-toolbar color="primary" class="example-toolbar header_toolbar">
-                <button mat-icon-button (click)="snav.toggle()" class="mobview"><mat-icon>menu</mat-icon></button>
-                <span class="title">Wrapper Administration Panel</span>
+<!-- Header Section start  -->
+<div class="header">
+  <mat-toolbar color="primary" class="example-toolbar header_toolbar">
+    <button mat-icon-button (click)="snav.toggle()" class="mobview"><mat-icon>menu</mat-icon></button>
+      <span class="title">Wrapper Administration Panel</span>
       
-                <span class="spacer"></span>
-      
-            <mat-form-field class="company_font_size">
-              <mat-select placeholder="Select Company">
-                <mat-option *ngFor="let company of companies" [value]="company.value">
-                  {{company.viewValue}}
-                </mat-option>
-              </mat-select>
-            </mat-form-field>
-      
-            <button mat-button class="margin20">Signout</button>
+        <span class="spacer"></span>
 
-            <!-- {{mobileQuery.matches}} -->
-        </mat-toolbar>
-        </div>
+<!-- Select Company -->
+
+  <mat-form-field class="company_font_size">
+    <mat-select placeholder="Select Company">
+      <mat-option *ngFor="let company of companies" [value]="company.value">
+        {{company.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+      
+  <!-- Signout Button -->
+  
+  <button mat-button class="margin20">Signout</button>
+
+  <!-- {{mobileQuery.matches}} -->
+  </mat-toolbar>
+</div>
 
 <!-- Header Section end  -->
 

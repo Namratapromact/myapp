@@ -3,12 +3,15 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AddAdminComponent } from './add-admin/add-admin.component';
 import { AdminListComponent } from './admin-list/admin-list.component';
+import { DeleteadminComponent } from './deleteadmin/deleteadmin.component';
 
 const adminRoutes: Routes = [
 
   { path: 'adminlist', component: AdminListComponent },
         
-  { path: 'addadmin', component: AddAdminComponent }
+  { path: 'addadmin', component: AddAdminComponent },
+
+  { path: '', component: DeleteadminComponent} 
 
 ];
 

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 
-
+/* Type Dropdown */
 export interface List {
   value: string;
   viewValue: string;
@@ -14,6 +14,7 @@ export interface List {
 })
 export class AddAdminComponent implements OnInit {
 
+/* Type Dropdown */
   lists: List[] = [
     {value: 'ca-0', viewValue: 'Company Administration'},
     {value: 'manage-1', viewValue: 'Management'},
@@ -25,9 +26,11 @@ export class AddAdminComponent implements OnInit {
   ngOnInit() {
   }
 
+ /* Go back to AdminList Page */
   goBack(): void {
     this.location.back();
   }
   
+  /* To hide Password */
   hide = true;
 }
